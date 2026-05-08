@@ -11,7 +11,7 @@ const CommandPalette = () => {
     { id: 'skills', title: 'Go to Skills', icon: '🛠️', action: () => scrollToSection('skills') },
     { id: 'projects', title: 'Go to Projects', icon: '🚀', action: () => scrollToSection('projects') },
     { id: 'contact', title: 'Go to Contact', icon: '📧', action: () => scrollToSection('contact') },
-    { id: 'resume', title: 'Download Resume', icon: '📄', action: () => window.open('/Ashokkumar_Resume.pdf', '_blank') },
+    { id: 'resume', title: 'View Resume', icon: '📄', action: () => window.open('/Ashokkumar_Resume.pdf', '_blank') },
   ];
 
   useEffect(() => {
