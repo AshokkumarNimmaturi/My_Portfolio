@@ -1,0 +1,191 @@
+.contact-section {
+  padding: var(--space-24) 0;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  padding: var(--space-12);
+  border-radius: var(--border-radius-lg);
+}
+
+.contact-info .section-title::after {
+  left: 0;
+  transform: none;
+}
+
+.contact-desc {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-8);
+  line-height: 1.6;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  background: rgba(16, 185, 129, 0.1);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contact-item h4 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.contact-item p, .contact-item a {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.contact-item a:hover {
+  color: var(--accent-primary);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.social-btn {
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-full);
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.social-btn:hover {
+  background: var(--gradient-accent);
+  border-color: transparent;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: var(--space-3) var(--space-4);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.submit-btn {
+  margin-top: var(--space-4);
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: var(--space-8) var(--space-6);
+  }
+}
+
+.success-message {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-4);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-20px);}
+  60% {transform: translateY(-10px);}
+}
+
+.success-message h3 {
+  font-size: 2rem;
+  margin-bottom: var(--space-2);
+  color: var(--accent-primary);
+}
+
+.success-message p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.contact-qr-section {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+.contact-qr-section h4 {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.qr-box {
+  display: inline-block;
+  padding: var(--space-4);
+  background: white; /* QR codes need white background for scanning */
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.qr-box img {
+  display: block;
+  width: 120px;
+  height: 120px;
+}

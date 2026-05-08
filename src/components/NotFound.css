@@ -1,0 +1,33 @@
+.not-found-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primary);
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.not-found-code {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--accent-primary);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+  text-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+}
+
+.not-found-title {
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.not-found-text {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

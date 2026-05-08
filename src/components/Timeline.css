@@ -1,0 +1,105 @@
+.timeline-container {
+  position: relative;
+  margin-top: var(--space-8);
+  padding-left: var(--space-8);
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 18px;
+  width: 2px;
+  background: var(--gradient-accent);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-8);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: calc(-1 * var(--space-8));
+  width: 38px;
+  height: 38px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+.timeline-content {
+  padding: var(--space-6);
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  transition: transform var(--transition-normal);
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  background: rgba(16, 185, 129, 0.1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--border-radius-full);
+  margin-bottom: var(--space-3);
+}
+
+.timeline-title {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-company {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: var(--space-3);
+}
+
+.timeline-location {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.timeline-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    padding-left: var(--space-6);
+  }
+  
+  .timeline-container::before {
+    left: 10px;
+  }
+  
+  .timeline-dot {
+    left: calc(-1 * var(--space-6));
+    width: 22px;
+    height: 22px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,115 @@
+.cp-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 11000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15vh;
+}
+
+.cp-modal {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.cp-search-container {
+  display: flex;
+  align-items: center;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cp-search-icon {
+  margin-right: var(--space-3);
+  font-size: 1.2rem;
+}
+
+.cp-input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  width: 100%;
+  outline: none;
+  font-family: var(--font-body);
+}
+
+.cp-list {
+  max-height: 350px;
+  overflow-y: auto;
+  padding: var(--space-2);
+}
+
+.cp-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-bottom: 2px;
+}
+
+.cp-item:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--accent-primary);
+}
+
+.cp-item-icon {
+  margin-right: var(--space-4);
+  font-size: 1.2rem;
+}
+
+.cp-item-title {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.cp-item-shortcut {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.cp-no-results {
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.cp-footer {
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--bg-tertiary);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--accent-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .cp-modal {
+    max-width: 90%;
+  }
+}
