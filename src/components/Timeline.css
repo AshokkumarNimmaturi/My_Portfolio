@@ -97,7 +97,7 @@
   }
   
   .timeline-dot {
-    left: calc(-1 * var(--space-6));
+    left: -1px; /* (10px line center - 11px half width) */
     width: 22px;
     height: 22px;
     font-size: 0.8rem;

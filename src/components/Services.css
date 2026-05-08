@@ -8,15 +8,20 @@
   gap: var(--space-6);
 }
 
-@media (max-width: 1200px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 992px) {
+  .services-section, .skills-section {
+    padding: var(--space-12) 0;
+  }
+
+  .service-card, .skill-category {
+    padding: var(--space-6);
   }
 }
 
 @media (max-width: 600px) {
-  .services-grid {
+  .services-grid, .skills-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-4);
   }
 }
 
