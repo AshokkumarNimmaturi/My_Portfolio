@@ -1,6 +1,5 @@
 .marquee-container {
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
   position: relative;
   padding: var(--space-8) 0;
