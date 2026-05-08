@@ -12,6 +12,7 @@ import CustomCursor from './components/CustomCursor'
 import Loader from './components/Loader'
 import BackToTop from './components/BackToTop'
 import CommandPalette from './components/CommandPalette'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -98,6 +99,7 @@ function App() {
       </main>
       <Footer />
       <BackToTop />
+      <Analytics />
     </div>
   )
 }
