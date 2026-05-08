@@ -14,7 +14,7 @@ const Timeline = () => {
       title: "B.Tech in Electronics and Communication Engineering",
       company: "Mahatma Gandhi University",
       location: "Nalgonda",
-      date: "Graduated",
+      date: "2020 - 2024 • Graduated",
       description: "Studied core subjects including Programming Fundamentals, Database Management Systems, and Software Engineering, building a strong foundation in problem-solving and OOP.",
       type: "education"
     }

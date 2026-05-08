@@ -10,6 +10,7 @@ const CommandPalette = () => {
     { id: 'about', title: 'Go to About', icon: '👤', action: () => scrollToSection('about') },
     { id: 'skills', title: 'Go to Skills', icon: '🛠️', action: () => scrollToSection('skills') },
     { id: 'projects', title: 'Go to Projects', icon: '🚀', action: () => scrollToSection('projects') },
+    { id: 'certificates', title: 'Go to Certificates', icon: '📜', action: () => scrollToSection('certificates') },
     { id: 'contact', title: 'Go to Contact', icon: '📧', action: () => scrollToSection('contact') },
     { id: 'resume', title: 'View Resume', icon: '📄', action: () => window.open('/Ashokkumar_Resume.pdf', '_blank') },
   ];
