@@ -12,6 +12,7 @@ import CustomCursor from './components/CustomCursor'
 import Loader from './components/Loader'
 import BackToTop from './components/BackToTop'
 import CommandPalette from './components/CommandPalette'
+import Certificates from './components/Certificates'
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
@@ -95,6 +96,7 @@ function App() {
         <Services />
         <Skills />
         <Projects />
+        <Certificates />
         <Contact />
       </main>
       <Footer />

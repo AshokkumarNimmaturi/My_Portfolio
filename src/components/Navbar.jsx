@@ -26,6 +26,7 @@ const Navbar = () => {
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
           <li 
             className="nav-command-hint" 
             title="Press Ctrl+K to Search"
