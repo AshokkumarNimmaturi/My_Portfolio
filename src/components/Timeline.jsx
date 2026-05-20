@@ -1,24 +1,27 @@
+import { API_BASE_URL } from '../config';
+import { useState, useEffect } from 'react';
 import './Timeline.css';
 
 const Timeline = () => {
-  const experiences = [
-    {
-      title: "Java Full Stack Developer",
-      company: "Aja Consulting Services",
-      location: "Hyderabad, Telangana",
-      date: "July 2025 - Present",
-      description: "Developing enterprise applications using Core Java, Hibernate, and Spring Boot. Optimizing database interactions with MySQL and ensuring APIs are fast, secure, and seamlessly integrated with modern React frontends.",
-      type: "work"
-    },
-    {
-      title: "B.Tech in Electronics and Communication Engineering",
-      company: "Mahatma Gandhi University",
-      location: "Nalgonda",
-      date: "2020 - 2024 • Graduated",
-      description: "Studied core subjects including Programming Fundamentals, Database Management Systems, and Software Engineering, building a strong foundation in problem-solving and OOP.",
-      type: "education"
-    }
-  ];
+  const [experiences, setExperiences] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API_BASE_URL}/api/timeline`)
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) setExperiences(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Failed to fetch timeline", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+     return <div className="timeline-container" style={{ textAlign: 'center' }}>Loading timeline...</div>;
+  }
 
   return (
     <div className="timeline-container">

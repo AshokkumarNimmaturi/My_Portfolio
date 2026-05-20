@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../config';
 import { useState } from 'react';
 import './Contact.css';
 
@@ -12,14 +13,20 @@ const Contact = () => {
     setError(null);
 
     const formData = new FormData(e.target);
-    // Add your Web3Forms Access Key here
-    formData.append("access_key", "465e5f30-f384-4d6b-8f2a-6b44b5dcfc4c");
+    const dataObj = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: "POST",
-        body: formData
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataObj)
       });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
 
       const data = await response.json();
 

@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../config';
 import { useState, useEffect } from 'react';
 import './Footer.css';
 
@@ -5,10 +6,16 @@ const Footer = () => {
   const [hits, setHits] = useState(null);
 
   useEffect(() => {
-    // Live visitor count using CountAPI
-    fetch('https://api.countapi.xyz/hit/ashokkumar-portfolio-v1/visits')
+    // Live visitor count from backend
+    fetch(`${API_BASE_URL}/api/visits`)
       .then(res => res.json())
-      .then(data => setHits(data.value))
+      .then(data => {
+        if (data && typeof data.value === 'number') {
+           setHits(data.value);
+        } else {
+           setHits(null);
+        }
+      })
       .catch(() => setHits(null));
   }, []);
 
